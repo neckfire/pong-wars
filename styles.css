@@ -37,7 +37,14 @@ html {
         padding-left: 20px;
         color: #172b36;
       }
+      .slider-container {
+	    text-align: center;
+	}
 
+	input[type="range"] {
+	    width: 80%;
+	    margin-top: 10px;
+	}
       #made {
         font-family: monospace;
         margin-top: auto;

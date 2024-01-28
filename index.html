@@ -5,11 +5,16 @@
     <link rel="stylesheet" href="styles.css">
   <body>
     <div id="container">
-      <canvas id="pongCanvas" width="800" height="800"></canvas>
+      <canvas id="pongCanvas" width="1024" height="1024"></canvas>
       <div id="score"></div>
+      <div class="slider-container">
+        <label for="rangeInput">Choose a value:</label>
+        <input type="range" id="rangeInput" min="8" max="64" value="8" step="1">
+        <p>Selected Value: <span id="selectedValue">8</span></p>
+    </div>
       <p id="made">
-        made by <a href="https://koenvangilst.nl">Koen van Gilst</a> | source on
-        <a href="https://github.com/vnglst/pong-wars">github</a>
+        made by <a href="https://koenvangilst.nl">Koen van Gilst</a>, forked by <a href="https://nfdt.netlify.app/neckfire.html">Neckfire</a> | source on
+        <a href="https://github.com/neckfire/pong-wars">github</a>
       </p>
     </div>
   <script src="script.js"></script>

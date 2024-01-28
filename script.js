@@ -34,13 +34,13 @@
 
     let x1 = canvas.width / 4;
     let y1 = canvas.height / 2;
-    let dx1 = 8;
-    let dy1 = 8;
+    let dx1 = 16;
+    let dy1 = 16;
 
     let x2 = (canvas.width / 4) * 3;
     let y2 = canvas.height / 2;
-    let dx2 = -8;
-    let dy2 = -8;
+    let dx2 = -16;
+    let dy2 = -16;
 
     function drawBall(x, y, color) {
       ctx.beginPath();
@@ -49,6 +49,29 @@
       ctx.fill();
       ctx.closePath();
     }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const rangeInput = document.getElementById('rangeInput');
+    const selectedValue = document.getElementById('selectedValue');
+
+    // Initial display of selected value
+    selectedValue.textContent = rangeInput.value;
+
+    // Update selected value when the slider is moved
+    rangeInput.addEventListener('input', function () {
+        selectedValue.textContent = rangeInput.value;
+
+        // Mettez à jour les vitesses des balles avec les nouvelles valeurs du slider
+        dx1 = parseFloat(rangeInput.value);
+        dy1 = parseFloat(rangeInput.value);
+        dx2 = -parseFloat(rangeInput.value);
+        dy2 = -parseFloat(rangeInput.value);
+    });
+});
+
+// Reste du code...
+
 
     function drawSquares() {
       for (let i = 0; i < numSquaresX; i++) {
